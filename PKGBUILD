@@ -2,20 +2,19 @@
 # Upstream: Qualcomm FastCV prebuilt binaries
 
 pkgname=qcom-fastcv-binaries
-pkgver=1.8.4
+pkgver=1.8.5
 pkgrel=1
 pkgdesc="Qualcomm FastCV computer vision library (prebuilt binary)"
 arch=('aarch64')
 url="https://softwarecenter.qualcomm.com"
 license=('LicenseRef-Qualcomm-EULA')
 depends=('qcom-fastrpc' 'glib2')
-install=qcom-fastcv-binaries.install
 options=('!strip')
 
-_datestamp=251222
+_datestamp=260222
 
 source=("https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/computervision-fastcv.qclinux.0.1/${_datestamp}/prebuilt_yocto/${pkgname}_${pkgver}_armv8a.tar.gz")
-sha256sums=('3fe9238e3a12ddbc666a34107c5b0ead7bbe136fdaa3b4405246f692144c916c')
+sha256sums=('61522651088c8fd210febe2911bd979784f08ad207013fe76e96851ac7c666b3')
 
 package() {
   cd "$srcdir"
@@ -42,6 +41,7 @@ package() {
 
   # Headers
   install -Dm644 usr/include/fastcv/fastcv.h    "$pkgdir/usr/include/fastcv/fastcv.h"
+  install -Dm644 usr/include/fastcv/fastcvDsp.h  "$pkgdir/usr/include/fastcv/fastcvDsp.h"
   install -Dm644 usr/include/fastcv/fastcvExt.h  "$pkgdir/usr/include/fastcv/fastcvExt.h"
 
   # Pkgconfig

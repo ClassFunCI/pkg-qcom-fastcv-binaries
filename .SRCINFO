@@ -1,15 +1,14 @@
 pkgbase = qcom-fastcv-binaries
 	pkgdesc = Qualcomm FastCV computer vision library (prebuilt binary)
-	pkgver = 1.8.4
+	pkgver = 1.8.5
 	pkgrel = 1
 	url = https://softwarecenter.qualcomm.com
-	install = qcom-fastcv-binaries.install
 	arch = aarch64
 	license = LicenseRef-Qualcomm-EULA
 	depends = qcom-fastrpc
 	depends = glib2
 	options = !strip
-	source = https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/computervision-fastcv.qclinux.0.1/251222/prebuilt_yocto/qcom-fastcv-binaries_1.8.4_armv8a.tar.gz
-	sha256sums = 3fe9238e3a12ddbc666a34107c5b0ead7bbe136fdaa3b4405246f692144c916c
+	source = https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/computervision-fastcv.qclinux.0.1/260222/prebuilt_yocto/qcom-fastcv-binaries_1.8.5_armv8a.tar.gz
+	sha256sums = 61522651088c8fd210febe2911bd979784f08ad207013fe76e96851ac7c666b3
 
 pkgname = qcom-fastcv-binaries
